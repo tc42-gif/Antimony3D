@@ -1,0 +1,726 @@
+{
+  "CAT_COLORS": {
+    "Variables": "#FF6B6B",
+    "Logic": "#845EC2",
+    "Loops": "#D65DB1",
+    "Functions": "#00C9A7",
+    "Math": "#FFC75F",
+    "I/O": "#F9F871",
+    "Comments": "#A0A0A0",
+    "Special": "#888888",
+    "Comparison": "#FF6B6B",
+    "Logical": "#845EC2",
+    "Lists": "#D65DB1",
+    "More Math": "#FFC75F",
+    "List": "#AAAAAA",
+    "Datas": "#f5a7e6"
+  },
+  "CODE_TEMPLATES": {
+    "set_var": {
+      "template": "{name} = {value}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "name",
+          "label": "Name",
+          "default": "x",
+          "type": "entry"
+        },
+        {
+          "name": "value",
+          "label": "Value",
+          "default": "0",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "change_var": {
+      "template": "{name} += {value}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "name",
+          "label": "Name",
+          "default": "x",
+          "type": "entry"
+        },
+        {
+          "name": "value",
+          "label": "By",
+          "default": "1",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "if_then": {
+      "template": "if {condition}:",
+      "indent_after": true,
+      "params": [
+        {
+          "name": "condition",
+          "label": "Condition",
+          "default": "True",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "else_block": {
+      "template": "else:",
+      "indent_after": false,
+      "params": [],
+      "is_options": false,
+      "options": []
+    },
+    "elif": {
+      "template": "elif {condition}:",
+      "indent_after": true,
+      "params": [
+        {
+          "name": "condition",
+          "label": "Condition",
+          "default": "False",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "for_loop": {
+      "template": "for {var} in {iter}:",
+      "indent_after": true,
+      "params": [
+        {
+          "name": "var",
+          "label": "Var",
+          "default": "i",
+          "type": "entry"
+        },
+        {
+          "name": "iter",
+          "label": "In",
+          "default": "range(10)",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "while_loop": {
+      "template": "while {condition}:",
+      "indent_after": true,
+      "params": [
+        {
+          "name": "condition",
+          "label": "Condition",
+          "default": "True",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "break": {
+      "template": "break",
+      "indent_after": false,
+      "params": [],
+      "is_options": false,
+      "options": []
+    },
+    "continue": {
+      "template": "continue",
+      "indent_after": false,
+      "params": [],
+      "is_options": false,
+      "options": []
+    },
+    "def_fn": {
+      "template": "def {name}({args}):",
+      "indent_after": true,
+      "params": [
+        {
+          "name": "name",
+          "label": "Name",
+          "default": "my_func",
+          "type": "entry"
+        },
+        {
+          "name": "args",
+          "label": "Args",
+          "default": "",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "call_fn": {
+      "template": "{name}({args})",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "name",
+          "label": "Name",
+          "default": "my_func",
+          "type": "entry"
+        },
+        {
+          "name": "args",
+          "label": "Args",
+          "default": "",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "return_fn": {
+      "template": "return {value}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "value",
+          "label": "Value",
+          "default": "None",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "add": {
+      "template": "{result} = {a} + {b}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "result",
+          "label": "Store",
+          "default": "r",
+          "type": "entry"
+        },
+        {
+          "name": "a",
+          "label": "A",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "b",
+          "label": "B",
+          "default": "0",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "sub": {
+      "template": "{result} = {a} - {b}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "result",
+          "label": "Store",
+          "default": "r",
+          "type": "entry"
+        },
+        {
+          "name": "a",
+          "label": "A",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "b",
+          "label": "B",
+          "default": "0",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "mul": {
+      "template": "{result} = {a} * {b}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "result",
+          "label": "Store",
+          "default": "r",
+          "type": "entry"
+        },
+        {
+          "name": "a",
+          "label": "A",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "b",
+          "label": "B",
+          "default": "0",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "div": {
+      "template": "{result} = {a} / {b}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "result",
+          "label": "Store",
+          "default": "r",
+          "type": "entry"
+        },
+        {
+          "name": "a",
+          "label": "A",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "b",
+          "label": "B",
+          "default": "0",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "print": {
+      "template": "print({value})",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "value",
+          "label": "Value",
+          "default": "'hello'",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "comment": {
+      "template": "# {text}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "text",
+          "label": "Text",
+          "default": "comment",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "compare": {
+      "template": "{a} {op} {b}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "a",
+          "label": "A",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "op",
+          "label": "Op",
+          "default": "==",
+          "type": "entry"
+        },
+        {
+          "name": "b",
+          "label": "B",
+          "default": "0",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "and_op": {
+      "template": "{a} and {b}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "a",
+          "label": "A",
+          "default": "True",
+          "type": "entry"
+        },
+        {
+          "name": "b",
+          "label": "B",
+          "default": "False",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "or_op": {
+      "template": "{a} or {b}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "a",
+          "label": "A",
+          "default": "True",
+          "type": "entry"
+        },
+        {
+          "name": "b",
+          "label": "B",
+          "default": "False",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "not_op": {
+      "template": "not {a}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "a",
+          "label": "A",
+          "default": "True",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "list_create": {
+      "template": "{result} = [{items}]",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "result",
+          "label": "Store",
+          "default": "my_list",
+          "type": "entry"
+        },
+        {
+          "name": "items",
+          "label": "Items",
+          "default": "",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "list_append": {
+      "template": "{list_name}.append({item})",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "list_name",
+          "label": "List",
+          "default": "my_list",
+          "type": "entry"
+        },
+        {
+          "name": "item",
+          "label": "Item",
+          "default": "0",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "blank": {
+      "template": "{custom}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "custom",
+          "label": "Code",
+          "default": "pass",
+          "type": "entry"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "multiline": {
+      "template": "# {content}",
+      "indent_after": false,
+      "params": [
+        {
+          "name": "content",
+          "label": "Multi\u2011line content",
+          "default": "",
+          "type": "text"
+        }
+      ],
+      "is_options": false,
+      "options": []
+    },
+    "global": {
+      "template": "global {var}",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "var",
+          "label": "Variables",
+          "default": "a",
+          "type": "entry"
+        }
+      ]
+    },
+    "dict": {
+      "template": "{dict} = {value}",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "dict",
+          "label": "Var",
+          "default": "my_dict",
+          "type": "entry"
+        },
+        {
+          "name": "value",
+          "label": "Value",
+          "default": "{\"key\":\"value\"}",
+          "type": "entry"
+        }
+      ]
+    },
+    "eval": {
+      "template": "eval({code})",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "code",
+          "label": "Code",
+          "default": "None",
+          "type": "entry"
+        }
+      ]
+    },
+    "try": {
+      "template": "try:",
+      "indent_after": true,
+      "is_options": false,
+      "options": [],
+      "params": []
+    },
+    "except": {
+      "template": "except {error}:",
+      "indent_after": true,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "error",
+          "label": "Error",
+          "default": "TypeError",
+          "type": "entry"
+        }
+      ]
+    },
+    "except_pass": {
+      "template": "except: pass",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": []
+    },
+    "int": {
+      "template": "int({value})",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "value",
+          "label": "num",
+          "default": "\"1\"",
+          "type": "entry"
+        }
+      ]
+    },
+    "str": {
+      "template": "str({value})",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "value",
+          "label": "Value",
+          "default": "1",
+          "type": "entry"
+        }
+      ]
+    },
+    "float": {
+      "template": "float({value})",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "value",
+          "label": "Value",
+          "default": "1",
+          "type": "entry"
+        }
+      ]
+    },
+    "len": {
+      "template": "len({value})",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "value",
+          "label": "value",
+          "default": "\"123\"",
+          "type": "entry"
+        }
+      ]
+    },
+    "range": {
+      "template": "range({args})",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "args",
+          "label": "Args",
+          "default": "1,10,1",
+          "type": "entry"
+        }
+      ]
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    [
+      "Variables",
+      [
+        "set_var",
+        "change_var",
+        "global"
+      ]
+    ],
+    [
+      "Logic",
+      [
+        "if_then",
+        "else_block",
+        "elif",
+        "try",
+        "except",
+        "except_pass"
+      ]
+    ],
+    [
+      "Comparison",
+      [
+        "compare"
+      ]
+    ],
+    [
+      "Logical",
+      [
+        "and_op",
+        "or_op",
+        "not_op"
+      ]
+    ],
+    [
+      "Loops",
+      [
+        "for_loop",
+        "while_loop",
+        "break",
+        "continue"
+      ]
+    ],
+    [
+      "Functions",
+      [
+        "def_fn",
+        "call_fn",
+        "return_fn"
+      ]
+    ],
+    [
+      "Math",
+      [
+        "add",
+        "sub",
+        "mul",
+        "div"
+      ]
+    ],
+    [
+      "Lists",
+      [
+        "list_create",
+        "list_append",
+        "dict"
+      ]
+    ],
+    [
+      "I/O",
+      [
+        "print"
+      ]
+    ],
+    [
+      "Comments",
+      [
+        "comment"
+      ]
+    ],
+    [
+      "Special",
+      [
+        "blank",
+        "multiline",
+        "eval"
+      ]
+    ],
+    [
+      "List",
+      []
+    ],
+    [
+      "Datas",
+      [
+        "int",
+        "str",
+        "float",
+        "len",
+        "range"
+      ]
+    ]
+  ]
+}

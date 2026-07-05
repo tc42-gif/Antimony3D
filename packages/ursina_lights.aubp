@@ -1,0 +1,36 @@
+{
+  "CAT_COLORS": {
+    "Ursina Lights": "#FFC107"
+  },
+  "CODE_TEMPLATES": {
+    "directional_light": {
+      "template": "DirectionalLight(shadows={shadows}, position=({x}, {y}, {z}), color={color})",
+      "params": [
+        {"name": "shadows", "label": "Shadows", "default": "True", "type": "entry"},
+        {"name": "x", "label": "X", "default": "2", "type": "entry"},
+        {"name": "y", "label": "Y", "default": "10", "type": "entry"},
+        {"name": "z", "label": "Z", "default": "3", "type": "entry"},
+        {"name": "color", "label": "Color", "default": "color.white", "type": "entry"}
+      ]
+    },
+    "point_light": {
+      "template": "PointLight(position=({x}, {y}, {z}), color={color}, range={range})",
+      "params": [
+        {"name": "x", "label": "X", "default": "0", "type": "entry"},
+        {"name": "y", "label": "Y", "default": "3", "type": "entry"},
+        {"name": "z", "label": "Z", "default": "0", "type": "entry"},
+        {"name": "color", "label": "Color", "default": "color.yellow", "type": "entry"},
+        {"name": "range", "label": "Range", "default": "10", "type": "entry"}
+      ]
+    },
+    "ambient_light": {
+      "template": "AmbientLight(color={color})",
+      "params": [
+        {"name": "color", "label": "Color", "default": "color.rgb(50,50,50)", "type": "entry"}
+      ]
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    ["Ursina Lights", ["directional_light", "point_light", "ambient_light"]]
+  ]
+}

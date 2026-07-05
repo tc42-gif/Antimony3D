@@ -1,0 +1,149 @@
+{
+  "CAT_COLORS": {
+    "Ursina UI": "#607D8B"
+  },
+  "CODE_TEMPLATES": {
+    "button": {
+      "template": "Button(text='{text}', color={color}, position=({x}, {y}), on_click={on_click})",
+      "params": [
+        {
+          "name": "text",
+          "label": "Text",
+          "default": "Click me",
+          "type": "entry"
+        },
+        {
+          "name": "color",
+          "label": "Color",
+          "default": "color.azure",
+          "type": "entry"
+        },
+        {
+          "name": "x",
+          "label": "X",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "y",
+          "label": "Y",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "on_click",
+          "label": "Function",
+          "default": "None",
+          "type": "entry"
+        }
+      ]
+    },
+    "text": {
+      "template": "Text(text={text}, position=({x}, {y}), scale={scale})",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "text",
+          "label": "Text",
+          "default": "Hello",
+          "type": "entry"
+        },
+        {
+          "name": "x",
+          "label": "X",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "y",
+          "label": "Y",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "scale",
+          "label": "Scale",
+          "default": "1",
+          "type": "entry"
+        }
+      ]
+    },
+    "slider": {
+      "template": "Slider(min={min}, max={max}, default={default}, text='{label}')",
+      "params": [
+        {
+          "name": "min",
+          "label": "Min",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "max",
+          "label": "Max",
+          "default": "1",
+          "type": "entry"
+        },
+        {
+          "name": "default",
+          "label": "Default",
+          "default": ".5",
+          "type": "entry"
+        },
+        {
+          "name": "label",
+          "label": "Label",
+          "default": "Volume",
+          "type": "entry"
+        }
+      ]
+    },
+    "panel": {
+      "template": "Panel(position=({x}, {y}), scale=({sx}, {sy}), color={color})",
+      "params": [
+        {
+          "name": "x",
+          "label": "X",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "y",
+          "label": "Y",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "sx",
+          "label": "Scale X",
+          "default": ".5",
+          "type": "entry"
+        },
+        {
+          "name": "sy",
+          "label": "Scale Y",
+          "default": ".5",
+          "type": "entry"
+        },
+        {
+          "name": "color",
+          "label": "Color",
+          "default": "color.white",
+          "type": "entry"
+        }
+      ]
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    [
+      "Ursina UI",
+      [
+        "button",
+        "text",
+        "slider",
+        "panel"
+      ]
+    ]
+  ]
+}

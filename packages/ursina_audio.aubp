@@ -1,0 +1,32 @@
+{
+  "CAT_COLORS": {
+    "Ursina Audio": "#9C27B0"
+  },
+  "CODE_TEMPLATES": {
+    "play_sound": {
+      "template": "Audio('{file}', autoplay=True, volume={vol}, pitch={pitch})",
+      "params": [
+        {"name": "file", "label": "Sound file", "default": "sound", "type": "entry"},
+        {"name": "vol", "label": "Volume", "default": "1", "type": "entry"},
+        {"name": "pitch", "label": "Pitch", "default": "1", "type": "entry"}
+      ]
+    },
+    "audio_fade": {
+      "template": "{audio}.fade_out(duration={dur})",
+      "params": [
+        {"name": "audio", "label": "Audio object", "default": "a", "type": "entry"},
+        {"name": "dur", "label": "Duration (s)", "default": "2", "type": "entry"}
+      ]
+    },
+    "audio_loop": {
+      "template": "{audio}.loop = {loop}",
+      "params": [
+        {"name": "audio", "label": "Audio object", "default": "a", "type": "entry"},
+        {"name": "loop", "label": "Loop", "default": "True", "type": "entry"}
+      ]
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    ["Ursina Audio", ["play_sound", "audio_fade", "audio_loop"]]
+  ]
+}

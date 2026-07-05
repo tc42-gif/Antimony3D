@@ -1,0 +1,31 @@
+{
+  "CAT_COLORS": {
+    "Ursina Timing": "#FF5722"
+  },
+  "CODE_TEMPLATES": {
+    "invoke": {
+      "template": "invoke({func}, delay={delay})",
+      "params": [
+        {"name": "func", "label": "Function", "default": "print('later')", "type": "entry"},
+        {"name": "delay", "label": "Delay (s)", "default": "1", "type": "entry"}
+      ]
+    },
+    "wait": {
+      "template": "Wait({duration})",
+      "params": [
+        {"name": "duration", "label": "Duration (s)", "default": "1", "type": "entry"}
+      ]
+    },
+    "sequence": {
+      "template": "Sequence(Func({func1}), Wait({wait}), Func({func2}))",
+      "params": [
+        {"name": "func1", "label": "First function", "default": "print('start')", "type": "entry"},
+        {"name": "wait", "label": "Wait (s)", "default": "1", "type": "entry"},
+        {"name": "func2", "label": "Second function", "default": "print('end')", "type": "entry"}
+      ]
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    ["Ursina Timing", ["invoke", "wait", "sequence"]]
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "CAT_COLORS": {
+    "Ursina Prefabs": "#00BCD4"
+  },
+  "CODE_TEMPLATES": {
+    "first_person_controller": {
+      "template": "FirstPersonController(speed={speed}, position=({x}, {y}, {z}))",
+      "params": [
+        {"name": "speed", "label": "Speed", "default": "5", "type": "entry"},
+        {"name": "x", "label": "X", "default": "0", "type": "entry"},
+        {"name": "y", "label": "Y", "default": "2", "type": "entry"},
+        {"name": "z", "label": "Z", "default": "0", "type": "entry"}
+      ]
+    },
+    "smooth_follow": {
+      "template": "{target}.add_script(SmoothFollow(target={follow}, offset={offset}, speed={speed}))",
+      "params": [
+        {"name": "target", "label": "Target entity", "default": "e", "type": "entry"},
+        {"name": "follow", "label": "Entity to follow", "default": "player", "type": "entry"},
+        {"name": "offset", "label": "Offset (x,y,z)", "default": "(0,2,0)", "type": "entry"},
+        {"name": "speed", "label": "Speed", "default": "8", "type": "entry"}
+      ]
+    },
+    "draggable": {
+      "template": "Draggable(model='{model}', position=({x}, {y}, 0))",
+      "params": [
+        {"name": "model", "label": "Model", "default": "cube", "type": "entry"},
+        {"name": "x", "label": "X", "default": "0", "type": "entry"},
+        {"name": "y", "label": "Y", "default": "0", "type": "entry"}
+      ]
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    ["Ursina Prefabs", ["first_person_controller", "smooth_follow", "draggable"]]
+  ]
+}

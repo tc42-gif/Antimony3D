@@ -1,0 +1,89 @@
+{
+  "CAT_COLORS": {
+    "Ursina Input": "#d2bdf7"
+  },
+  "CODE_TEMPLATES": {
+    "held_keys_check": {
+      "template": "if held_keys['{key}']: {action}",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "key",
+          "label": "Key",
+          "default": "a",
+          "type": "entry"
+        },
+        {
+          "name": "action",
+          "label": "Action",
+          "default": "player.x += time.dt",
+          "type": "entry"
+        }
+      ]
+    },
+    "mouse_position": {
+      "template": "mouse.position",
+      "params": []
+    },
+    "def_input": {
+      "template": "def input(key):",
+      "indent_after": true,
+      "is_options": false,
+      "options": [],
+      "params": []
+    },
+    "click_raycast": {
+      "template": "{var}=raycast(camera.world_position, camera.forward, distance={dist})",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "var",
+          "label": "Info",
+          "default": "hit_info",
+          "type": "entry"
+        },
+        {
+          "name": "dist",
+          "label": "Distance",
+          "default": "5",
+          "type": "entry"
+        }
+      ]
+    },
+    "on_click": {
+      "template": "{entity}.on_click = {func}",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "entity",
+          "label": "Entity",
+          "default": "cube",
+          "type": "entry"
+        },
+        {
+          "name": "func",
+          "label": "Function",
+          "default": "my_func",
+          "type": "entry"
+        }
+      ]
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    [
+      "Ursina Input",
+      [
+        "held_keys_check",
+        "mouse_position",
+        "def_input",
+        "click_raycast"
+      ]
+    ]
+  ]
+}

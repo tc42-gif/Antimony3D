@@ -1,0 +1,167 @@
+{
+  "CAT_COLORS": {
+    "Ursina Entity": "#4CAF50"
+  },
+  "CODE_TEMPLATES": {
+    "entity_with_props": {
+      "template": "Entity(model='{model}', color={color}, position=({x}, {y}, {z}), scale=({sx}, {sy}, {sz}), rotation=({rx}, {ry}, {rz}))",
+      "params": [
+        {
+          "name": "model",
+          "label": "Model",
+          "default": "cube",
+          "type": "entry"
+        },
+        {
+          "name": "color",
+          "label": "Color",
+          "default": "color.white",
+          "type": "entry"
+        },
+        {
+          "name": "x",
+          "label": "X",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "y",
+          "label": "Y",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "z",
+          "label": "Z",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "sx",
+          "label": "Scale X",
+          "default": "1",
+          "type": "entry"
+        },
+        {
+          "name": "sy",
+          "label": "Scale Y",
+          "default": "1",
+          "type": "entry"
+        },
+        {
+          "name": "sz",
+          "label": "Scale Z",
+          "default": "1",
+          "type": "entry"
+        },
+        {
+          "name": "rx",
+          "label": "Rot X",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "ry",
+          "label": "Rot Y",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "rz",
+          "label": "Rot Z",
+          "default": "0",
+          "type": "entry"
+        }
+      ]
+    },
+    "duplicate_entity": {
+      "template": "duplicate({target}, {kwargs})",
+      "params": [
+        {
+          "name": "target",
+          "label": "Entity",
+          "default": "e",
+          "type": "entry"
+        },
+        {
+          "name": "kwargs",
+          "label": "Overrides",
+          "default": "x=1",
+          "type": "entry"
+        }
+      ]
+    },
+    "destroy_entity": {
+      "template": "destroy({target})",
+      "params": [
+        {
+          "name": "target",
+          "label": "Entity",
+          "default": "e",
+          "type": "entry"
+        }
+      ]
+    },
+    "entity": {
+      "template": "Entity(model='{model}', color={color}, texture={texture}, position=({x}, {y}, {z}), collider={hitbox})",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "model",
+          "label": "Model",
+          "default": "cube",
+          "type": "entry"
+        },
+        {
+          "name": "color",
+          "label": "Color",
+          "default": "color.white",
+          "type": "entry"
+        },
+        {
+          "name": "texture",
+          "label": "Texture",
+          "default": "None",
+          "type": "entry"
+        },
+        {
+          "name": "x",
+          "label": "X",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "y",
+          "label": "Y",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "z",
+          "label": "Z",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "hitbox",
+          "label": "Collision",
+          "default": "'box'",
+          "type": "entry"
+        }
+      ]
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    [
+      "Ursina Entity",
+      [
+        "entity_with_props",
+        "duplicate_entity",
+        "destroy_entity",
+        "entity"
+      ]
+    ]
+  ]
+}

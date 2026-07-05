@@ -1,0 +1,183 @@
+{
+  "CAT_COLORS": {
+    "Ursina Camera": "#2196F3",
+    "Ursina Camra": "#2196F3"
+  },
+  "CODE_TEMPLATES": {
+    "set_camera_ortho": {
+      "template": "camera.orthographic = True\ncamera.fov = {fov}",
+      "params": [
+        {
+          "name": "fov",
+          "label": "FOV",
+          "default": "10",
+          "type": "entry"
+        }
+      ]
+    },
+    "set_camera_persp": {
+      "template": "camera.orthographic = False\ncamera.fov = {fov}",
+      "params": [
+        {
+          "name": "fov",
+          "label": "FOV",
+          "default": "40",
+          "type": "entry"
+        }
+      ]
+    },
+    "camera_position": {
+      "template": "camera.position = ({x}, {y}, {z})",
+      "params": [
+        {
+          "name": "x",
+          "label": "X",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "y",
+          "label": "Y",
+          "default": "10",
+          "type": "entry"
+        },
+        {
+          "name": "z",
+          "label": "Z",
+          "default": "20",
+          "type": "entry"
+        }
+      ]
+    },
+    "editor_camera": {
+      "template": "EditorCamera(rotation=({rx}, {ry}, 0), panning_speed={pan})",
+      "params": [
+        {
+          "name": "rx",
+          "label": "Rot X",
+          "default": "30",
+          "type": "entry"
+        },
+        {
+          "name": "ry",
+          "label": "Rot Y",
+          "default": "10",
+          "type": "entry"
+        },
+        {
+          "name": "pan",
+          "label": "Pan speed",
+          "default": "200",
+          "type": "entry"
+        }
+      ]
+    },
+    "Import_FPC": {
+      "template": "from ursina.prefabs.first_person_controller import FirstPersonController",
+      "params": []
+    },
+    "use_FPC": {
+      "template": "{obj} = FirstPersonController()",
+      "params": [
+        {
+          "name": "obj",
+          "label": "Obj",
+          "default": "player",
+          "type": "entry"
+        }
+      ]
+    },
+    "cam_parent": {
+      "template": "camera.parent = {camera}",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "camera",
+          "label": "Cam",
+          "default": "cam_holder",
+          "type": "entry"
+        }
+      ]
+    },
+    "cam_holder": {
+      "template": "{camera} = Entity()",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "camera",
+          "label": "Obj",
+          "default": "cam_holder",
+          "type": "entry"
+        }
+      ]
+    },
+    "smooth_follow": {
+      "template": "{cam}.add_script(SmoothFollow(target={tg}, speed={spd}, offset=[{x},{y},{z}]))",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "cam",
+          "label": "Cam",
+          "default": "cam_holder",
+          "type": "entry"
+        },
+        {
+          "name": "tg",
+          "label": "Target",
+          "default": "player",
+          "type": "entry"
+        },
+        {
+          "name": "spd",
+          "label": "Speed",
+          "default": "5",
+          "type": "entry"
+        },
+        {
+          "name": "x",
+          "label": "Offset_X",
+          "default": "0",
+          "type": "entry"
+        },
+        {
+          "name": "y",
+          "label": "Offset_Y",
+          "default": "5",
+          "type": "entry"
+        },
+        {
+          "name": "z",
+          "label": "Offset_Z",
+          "default": "-8",
+          "type": "entry"
+        }
+      ]
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    [
+      "Ursina Camera",
+      [
+        "set_camera_ortho",
+        "set_camera_persp",
+        "camera_position",
+        "editor_camera",
+        "Import_FPC",
+        "use_FPC",
+        "cam_parent",
+        "cam_holder",
+        "smooth_follow"
+      ]
+    ],
+    [
+      "Ursina Camra",
+      []
+    ]
+  ]
+}

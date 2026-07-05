@@ -1,0 +1,28 @@
+{
+  "CAT_COLORS": {
+    "Options": "#AAAAAA"
+  },
+  "CODE_TEMPLATES": {
+    "texture": {
+      "template": "{value}",
+      "indent_after": false,
+      "is_options": true,
+      "options": [
+        "'brick'",
+        "'grass'",
+        "'circle'",
+        "'sky_default'",
+        "'white_cube'",
+        "'shore'",
+        "'vignette'",
+        "'vertical_gradient'",
+        "'ursina_logo'",
+        "''"
+      ],
+      "params": []
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    ["Options", ["texture"]]
+  ]
+}

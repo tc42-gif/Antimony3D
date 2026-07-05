@@ -1,0 +1,24 @@
+{
+  "CAT_COLORS": {
+    "Options": "#AAAAAA"
+  },
+  "CODE_TEMPLATES": {
+    "True": {
+      "template": "{value}",
+      "indent_after": false,
+      "is_options": true,
+      "options": ["True", "False"],
+      "params": []
+    },
+    "None": {
+      "template": "{value}",
+      "indent_after": false,
+      "is_options": true,
+      "options": ["None"],
+      "params": []
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    ["Options", ["True", "None"]]
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "CAT_COLORS": {
+    "Options": "#AAAAAA"
+  },
+  "CODE_TEMPLATES": {
+    "model": {
+      "template": "{value}",
+      "indent_after": false,
+      "is_options": true,
+      "options": [
+        "'cube'",
+        "'sphere'",
+        "'plane'",
+        "'quad'",
+        "'circle'",
+        "'capsule'",
+        "'cylinder'",
+        "'torus'",
+        "''"
+      ],
+      "params": []
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    ["Options", ["model"]]
+  ]
+}

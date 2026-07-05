@@ -1,0 +1,36 @@
+{
+  "CAT_COLORS": {
+    "Ursina Math": "#795548"
+  },
+  "CODE_TEMPLATES": {
+    "random_color": {
+      "template": "color.random_color()",
+      "params": []
+    },
+    "lerp_color": {
+      "template": "lerp({c1}, {c2}, {t})",
+      "params": [
+        {"name": "c1", "label": "Color 1", "default": "color.red", "type": "entry"},
+        {"name": "c2", "label": "Color 2", "default": "color.blue", "type": "entry"},
+        {"name": "t", "label": "t (0-1)", "default": ".5", "type": "entry"}
+      ]
+    },
+    "color_tint": {
+      "template": "tint({color}, amount={amount})",
+      "params": [
+        {"name": "color", "label": "Color", "default": "color.white", "type": "entry"},
+        {"name": "amount", "label": "Amount", "default": ".2", "type": "entry"}
+      ]
+    },
+    "distance": {
+      "template": "distance({a}, {b})",
+      "params": [
+        {"name": "a", "label": "Vec3 A", "default": "(0,0,0)", "type": "entry"},
+        {"name": "b", "label": "Vec3 B", "default": "(1,0,0)", "type": "entry"}
+      ]
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    ["Ursina Math", ["random_color", "lerp_color", "color_tint", "distance"]]
+  ]
+}

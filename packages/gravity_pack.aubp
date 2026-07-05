@@ -1,0 +1,85 @@
+{
+  "CAT_COLORS": {
+    "Physics": "#AAAAAA",
+    "Pjysics": "#AAAAAA"
+  },
+  "CODE_TEMPLATES": {
+    "define_gravity": {
+      "template": "def apply_gravity(entity, ground, gravity={gravity}):",
+      "indent_after": true,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "gravity",
+          "label": "Gravity",
+          "default": "-0.5",
+          "type": "entry"
+        }
+      ]
+    },
+    "apply_gravity_call": {
+      "template": "apply_gravity({entity}, {ground}, {gravity})",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": [
+        {
+          "name": "entity",
+          "label": "Entity",
+          "default": "player_e",
+          "type": "entry"
+        },
+        {
+          "name": "ground",
+          "label": "Ground",
+          "default": "ground",
+          "type": "entry"
+        },
+        {
+          "name": "gravity",
+          "label": "Gravity",
+          "default": "-0.5",
+          "type": "entry"
+        }
+      ]
+    },
+    "if_not_hasattr": {
+      "template": "if not hasattr(entity, 'velocity_y'): entity.velocity_y = 0",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": []
+    },
+    "if_hit_ground": {
+      "template": "if entity.intersects(ground).hit: entity.y = ground.y + (ground.scale_y / 2) + (entity.scale_y / 2); entity.velocity_y = 0",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": []
+    },
+    "fall": {
+      "template": "entity.velocity_y += gravity * time.dt; entity.y += entity.velocity_y * time.dt",
+      "indent_after": false,
+      "is_options": false,
+      "options": [],
+      "params": []
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    [
+      "Physics",
+      [
+        "define_gravity",
+        "apply_gravity_call",
+        "if_not_hasattr",
+        "if_hit_ground",
+        "fall"
+      ]
+    ],
+    [
+      "Pjysics",
+      []
+    ]
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "CAT_COLORS": {
+    "Ursina Animation": "#E91E63"
+  },
+  "CODE_TEMPLATES": {
+    "animator": {
+      "template": "Animator({'idle': None, 'walk': None})",
+      "params": []
+    },
+    "frame_animation_3d": {
+      "template": "FrameAnimation3d('{base_name}')",
+      "params": [
+        {"name": "base_name", "label": "Base name", "default": "run_cycle_", "type": "entry"}
+      ]
+    },
+    "lerp_animation": {
+      "template": "animate({target}, '{attr}', {value}, duration={dur}, curve=curve.{curve})",
+      "params": [
+        {"name": "target", "label": "Entity", "default": "e", "type": "entry"},
+        {"name": "attr", "label": "Attribute", "default": "x", "type": "entry"},
+        {"name": "value", "label": "Target value", "default": "5", "type": "entry"},
+        {"name": "dur", "label": "Duration (s)", "default": "1", "type": "entry"},
+        {"name": "curve", "label": "Curve", "default": "in_out_quad", "type": "entry"}
+      ]
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    ["Ursina Animation", ["animator", "frame_animation_3d", "lerp_animation"]]
+  ]
+}

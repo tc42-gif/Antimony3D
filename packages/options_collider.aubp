@@ -1,0 +1,23 @@
+{
+  "CAT_COLORS": {
+    "Options": "#AAAAAA"
+  },
+  "CODE_TEMPLATES": {
+    "collider": {
+      "template": "{value}",
+      "indent_after": false,
+      "is_options": true,
+      "options": [
+        "'box'",
+        "'sphere'",
+        "'capsule'",
+        "'mesh'",
+        "None"
+      ],
+      "params": []
+    }
+  },
+  "BLOCK_CATEGORIES": [
+    ["Options", ["collider"]]
+  ]
+}
